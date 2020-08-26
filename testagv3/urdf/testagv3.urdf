@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="testagv3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.71777408416687 -0.126824709750732 -0.0248255102237374"
+        rpy="0 0 0" />
+      <mass
+        value="150.039242649901" />
+      <inertia
+        ixx="10.8799273397316"
+        ixy="0.000288208661936818"
+        ixz="-0.00186372625450115"
+        iyy="14.6988994727425"
+        iyz="3.31594792501095"
+        izz="8.11802090403406" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leftwheel_link">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 0 -0.0255"
+        rpy="0 0 0" />
+      <mass
+        value="1.26911232586332" />
+      <inertia
+        ixx="0.00278823977992172"
+        ixy="-1.04404871487976E-50"
+        ixz="-7.57267166407278E-35"
+        iyy="0.00278823977992172"
+        iyz="-5.56599207631309E-36"
+        izz="0.00502631936658169" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv3/meshes/leftwheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv3/meshes/leftwheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftwheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.356812572991142 0.0416281601636031 -0.171447032853037"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="leftwheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rightwheel_link">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0255000000000003"
+        rpy="0 0 0" />
+      <mass
+        value="1.26911232586332" />
+      <inertia
+        ixx="0.00278823977992172"
+        ixy="-3.88797107523175E-34"
+        ixz="2.23911451202079E-19"
+        iyy="0.00278823977992172"
+        iyz="-6.41269119088801E-36"
+        izz="0.00502631936658168" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv3/meshes/rightwheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv3/meshes/rightwheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightwheel_joint"
+    type="continuous">
+    <origin
+      xyz="1.02781257314827 0.041628160163603 -0.171447032852976"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="rightwheel_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
