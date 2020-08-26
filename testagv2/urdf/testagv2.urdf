@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="testagv2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-10.7220441045078 0.11665704079787 -24.9955161086606"
+        rpy="0 0 0" />
+      <mass
+        value="150.039252280828" />
+      <inertia
+        ixx="10.4086321483737"
+        ixy="0.00935758642565165"
+        ixz="1.31544395573418"
+        iyy="16.0798429501459"
+        iyz="-0.0247646052408279"
+        izz="7.2083766227846" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="smallwheel_link1">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -3.5527136788005E-15 0.019999999999996"
+        rpy="0 0 0" />
+      <mass
+        value="0.263597216555037" />
+      <inertia
+        ixx="0.000173379311874296"
+        ixy="2.5410988417629E-21"
+        ixz="-1.29172524456281E-20"
+        iyy="0.000173379311874297"
+        iyz="-7.25060202849681E-19"
+        izz="0.000276466032667254" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/smallwheel_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/smallwheel_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="smallwheel_joint1"
+    type="continuous">
+    <origin
+      xyz="-11.1014059031624 24.7348218960849 0.0299999999999544"
+      rpy="1.57079632679487 1.54637570111202 1.22632190783272" />
+    <parent
+      link="base_link" />
+    <child
+      link="smallwheel_link1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="bigwheellink1">
+    <inertial>
+      <origin
+        xyz="1.77635683940025E-15 3.5527136788005E-15 0.0255000000000045"
+        rpy="0 0 0" />
+      <mass
+        value="1.26911232586333" />
+      <inertia
+        ixx="0.00278823977992175"
+        ixy="5.42101086242752E-20"
+        ixz="-5.42101086242752E-20"
+        iyy="0.00278823977992175"
+        iyz="1.0842021724855E-19"
+        izz="0.00502631936658173" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/bigwheellink1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/bigwheellink1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint1"
+    type="continuous">
+    <origin
+      xyz="-10.3817782081595 24.8750395321301 0.0689999123528428"
+      rpy="-1.5707963267949 -1.27357686270636 1.22632190783275" />
+    <parent
+      link="base_link" />
+    <child
+      link="bigwheellink1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="biglink2">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 3.5527136788005E-15 0.0255000000000045"
+        rpy="0 0 0" />
+      <mass
+        value="1.26911232586333" />
+      <inertia
+        ixx="0.00278823977992175"
+        ixy="-1.35525271560688E-20"
+        ixz="-9.14795583034644E-20"
+        iyy="0.00278823977992175"
+        iyz="6.50521303491303E-19"
+        izz="0.00502631936658173" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/biglink2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/biglink2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint2"
+    type="continuous">
+    <origin
+      xyz="-11.0133590198743 25.1016375870305 0.0689999123528535"
+      rpy="1.57079632679492 -1.54637570111202 -1.91527074575707" />
+    <parent
+      link="base_link" />
+    <child
+      link="biglink2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="smalllink2">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 3.5527136788005E-15 0.019999999999996"
+        rpy="0 0 0" />
+      <mass
+        value="0.263597216555037" />
+      <inertia
+        ixx="0.000173379311874296"
+        ixy="3.17637355220363E-21"
+        ixz="-1.29172524456281E-20"
+        iyy="0.000173379311874297"
+        iyz="-7.18283939271647E-19"
+        izz="0.000276466032667254" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/smalllink2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/smalllink2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="smalljoint2"
+    type="continuous">
+    <origin
+      xyz="-10.8731409011255 25.3562429199046 0.0299999999999523"
+      rpy="1.57079632679487 1.54637570111202 1.22632190783272" />
+    <parent
+      link="base_link" />
+    <child
+      link="smalllink2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="smalllink3">
+    <inertial>
+      <origin
+        xyz="-3.5527136788005E-15 3.5527136788005E-15 0.019999999999996"
+        rpy="0 0 0" />
+      <mass
+        value="0.263597216555037" />
+      <inertia
+        ixx="0.000173379311874296"
+        ixy="2.03287907341032E-20"
+        ixz="3.65918233213858E-19"
+        iyy="0.000173379311874296"
+        iyz="-5.75982404132924E-19"
+        izz="0.000276466032667254" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/smalllink3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/smalllink3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="smalljoint3"
+    type="continuous">
+    <origin
+      xyz="-10.4138094018041 25.1914443345611 0.029999999999921"
+      rpy="-1.5707963267949 0.978395011101676 -1.91527074575704" />
+    <parent
+      link="base_link" />
+    <child
+      link="smalllink3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="smalllink4">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0 0.0200000000000031"
+        rpy="0 0 0" />
+      <mass
+        value="0.263597216555037" />
+      <inertia
+        ixx="0.000173379311874296"
+        ixy="2.5410988417629E-21"
+        ixz="-1.29172524456281E-20"
+        iyy="0.000173379311874297"
+        iyz="-7.25060202849681E-19"
+        izz="0.000276466032667254" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/smalllink4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/smalllink4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="smalljoint4"
+    type="continuous">
+    <origin
+      xyz="-10.6326618731172 24.5666462905499 0.0299999999999544"
+      rpy="1.57079632679487 1.54637570111202 1.22632190783272" />
+    <parent
+      link="base_link" />
+    <child
+      link="smalllink4" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="high_plate_link">
+    <inertial>
+      <origin
+        xyz="-0.347432084827499 7.105427357601E-15 -1.07140844511219"
+        rpy="0 0 0" />
+      <mass
+        value="289.597759358593" />
+      <inertia
+        ixx="19.5245251695486"
+        ixy="1.73194791841524E-13"
+        ixz="-0.542677828327182"
+        iyy="20.1616537125782"
+        iyz="-2.3783842671771E-13"
+        izz="21.7684467304677" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/high_plate_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/high_plate_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="high_plate_joint"
+    type="fixed">
+    <origin
+      xyz="-10.843143296405 24.6580988490202 1.67991279728327"
+      rpy="0 0 -1.91527074575704" />
+    <parent
+      link="base_link" />
+    <child
+      link="high_plate_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="basehandlink">
+    <inertial>
+      <origin
+        xyz="7.22550926823828E-06 -0.000475137947400839 -0.0195650196201009"
+        rpy="0 0 0" />
+      <mass
+        value="1.91435237083378" />
+      <inertia
+        ixx="0.00312084186108553"
+        ixy="1.06039975773927E-07"
+        ixz="2.20007764164718E-07"
+        iyy="0.00309492928881999"
+        iyz="5.55006076660026E-07"
+        izz="0.00574920092556231" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/basehandlink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testagv2/meshes/basehandlink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="basehandjoint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.038"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="high_plate_link" />
+    <child
+      link="basehandlink" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
